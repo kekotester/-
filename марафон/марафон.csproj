@@ -46,6 +46,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Coordinator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coordinator.Designer.cs">
+      <DependentUpon>Coordinator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin.Designer.cs">
+      <DependentUpon>admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="checkrun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="checkrun.Designer.cs">
+      <DependentUpon>checkrun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fond.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fond.Designer.cs">
+      <DependentUpon>fond.cs</DependentUpon>
+    </Compile>
+    <Compile Include="info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="info.Designer.cs">
+      <DependentUpon>info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sponsor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sponsor.Designer.cs">
+      <DependentUpon>sponsor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaraphonDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaraphonDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="runner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="runner.Designer.cs">
+      <DependentUpon>runner.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +118,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="admin.resx">
+      <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="checkrun.resx">
+      <DependentUpon>checkrun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coordinator.resx">
+      <DependentUpon>Coordinator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fond.resx">
+      <DependentUpon>fond.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="info.resx">
+      <DependentUpon>info.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,6 +151,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="runner.resx">
+      <DependentUpon>runner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sponsor.resx">
+      <DependentUpon>sponsor.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="MaraphonDataSet.xsc">
       <DependentUpon>MaraphonDataSet.xsd</DependentUpon>
     </None>
@@ -99,6 +167,17 @@
     </None>
     <None Include="MaraphonDataSet.xss">
       <DependentUpon>MaraphonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MaraphonDataSet1.xsc">
+      <DependentUpon>MaraphonDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MaraphonDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaraphonDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MaraphonDataSet1.xss">
+      <DependentUpon>MaraphonDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -112,6 +191,50 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\arise-logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\aves-do-brazil-logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\clara-santos-oliveira-institute-logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\conquer-cancer-brazil.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\diabetes-brazil-logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\heart-health-sao-paulo-logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\human-rights-centre-logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\oxfam-international-logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\querstadtein-logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\save-the-children-fund-logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\stay-pumped-logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\the-red-cross-logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\upbeat-logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\wwsm-rescue-logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

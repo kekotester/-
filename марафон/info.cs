@@ -10,35 +10,27 @@ using System.Windows.Forms;
 
 namespace марафон
 {
-    public partial class more : Form
+    public partial class info : Form
     {
-        public more()
+        public info()
         {
             InitializeComponent();
         }
 
-        private void time_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
             TimeSpan time1;
-            DateTime a = Convert.ToDateTime("8.04.2020 6:00");
-            DateTime b = DateTime.Now;
-            time1 = a - b;
+            DateTime initial_time = Convert.ToDateTime("8.04.2020 6:00");
+            DateTime current_time = DateTime.Now;
+            time1 = initial_time - current_time;
             time.Text = time1.Days.ToString() + " дней " + time1.Hours.ToString() + " часов и " +
             time1.Minutes.ToString() + " минут до старта марафона!";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            main m = new main();
+            more m = new more();
             m.Show();
-            this.Hide();
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            info i = new info();
-            i.Show();
             this.Hide();
         }
     }

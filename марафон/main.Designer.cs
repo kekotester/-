@@ -51,7 +51,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(173, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "MARATHON SKILLS 2016";
+            this.label1.Text = "MARATHON SKILLS 2020";
             // 
             // label2
             // 
@@ -61,9 +61,9 @@
             this.label2.Location = new System.Drawing.Point(116, 40);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 32);
+            this.label2.Size = new System.Drawing.Size(112, 32);
             this.label2.TabIndex = 1;
-            this.label2.Text = "     Москва, Россия\r\nсреда 21 октября 2016";
+            this.label2.Text = "     Москва, Россия\r\nсреда 8 апреля 2020";
             // 
             // time
             // 
@@ -89,6 +89,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Я хочу стать бегуном";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -102,6 +103,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Я хочу стать спонсором бегуна";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -163,7 +165,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "main";
-            this.Text = "Marathon skills 2016";
+            this.Text = "Marathon skills 2020";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

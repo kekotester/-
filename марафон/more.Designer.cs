@@ -67,7 +67,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(173, 17);
             this.label1.TabIndex = 4;
-            this.label1.Text = "MARATHON SKILLS 2016";
+            this.label1.Text = "MARATHON SKILLS 2020\r\n";
             // 
             // pictureBox1
             // 
@@ -98,8 +98,9 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(127, 58);
             this.button2.TabIndex = 7;
-            this.button2.Text = "Marathon Skills 2016";
+            this.button2.Text = "Marathon Skills 2020";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
