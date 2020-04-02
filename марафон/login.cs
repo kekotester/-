@@ -47,56 +47,56 @@ namespace марафон
         {
             int login = 0;
             string role = "";
-            using (SqlConnection con = new
-                SqlConnection(марафон.Properties.Settings.Default.MaraphonConnectionString))
+            using (SqlConnection conn = new
+            SqlConnection(марафон.Properties.Settings.Default.MaraphonConnectionString))
             {
-                con.Open();
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandText = "SELECT Count (*)FROM [User] Where Email=" + textBox1.Text + "AND Password=" + textBox2.Text + "";
+                conn.Open();
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = "SELECT Count(*) FROM [User] WHERE Email='Email'" + textBox1.Text + "AND Password = 'Password'" + textBox2.Text + "'";
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     login = Convert.ToInt32(reader[0]);
                 }
-                con.Close();
-                con.Open();
-                SqlCommand cmd1 = con.CreateCommand();
-                cmd1.CommandText = "SELECT Roleld FROM [User] WHERE Email=" + textBox1.Text + "AND password=" + textBox2.Text + "";
+                conn.Close();
+                conn.Open();
+                SqlCommand cmd1 = conn.CreateCommand();
+                cmd1.CommandText = "SELECT RoleId FROM [User] WHERE Email='Email'" + textBox1.Text + "AND Password = 'Password'" + textBox2.Text + "'";
                 SqlDataReader reader1 = cmd1.ExecuteReader();
                 while (reader1.Read())
                 {
                     role = reader1[0].ToString();
                 }
-                con.Close();
+                conn.Close();
             }
-                    if(login == 1)
-                    {
+            if (login == 1)
+            {
                 File.WriteAllText("Resources/login.txt", textBox1.Text);
                 if (role == "R")
                 {
-                    runner r = new runner();
-                    r.Show();
+                    runner Runner = new runner();
+                    Runner.Show();
                     this.Hide();
                 }
                 else
                 {
                     if (role == "A")
                     {
-                        admin a = new admin();
-                        a.Show();
+                        admin Admin = new admin();
+                        Admin.Show();
                         this.Hide();
                     }
                     else
                     {
-                        if(role == "c")
+                        if (role == "C")
                         {
-                            Coordinator coor = new Coordinator();
-                            coor.Show();
+                            Coordinator Coordinator = new Coordinator();
+                            Coordinator.Show();
                             this.Hide();
                         }
                     }
                 }
-                    }
+            }
                     else
                     {
                 MessageBox.Show("Не правильный логин/пароль.");

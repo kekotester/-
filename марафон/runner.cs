@@ -40,5 +40,11 @@ namespace марафон
             n.Show();
             this.Hide();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            contacts c = new contacts();
+            c.ShowDialog();
+        }
     }
 }

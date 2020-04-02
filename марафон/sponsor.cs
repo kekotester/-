@@ -105,26 +105,6 @@ namespace марафон
                 textBox4.MaxLength = 16;
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            if (Convert.ToInt32(dateTimePicker1.Value) < DateTime.Today.Month)
-            {
-                dateTimePicker1.CalendarMonthBackground = Color.Red;
-            }
-            else
-            {
-                dateTimePicker1.CalendarMonthBackground = Color.White;
-            }
-            if (Convert.ToInt32(dateTimePicker1.Value) < DateTime.Today.Year)
-            {
-                dateTimePicker1.CalendarTitleBackColor = Color.Red;
-            }
-            else
-            {
-                dateTimePicker1.CalendarTitleBackColor = Color.White;
-            }
-        }
-
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
             if (textBox6.TextLength != 3)
@@ -147,13 +127,13 @@ namespace марафон
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    fond.label1.Text = reader["CharityName"].ToString();
-                    fond.textbox1.Text = reader["CharityDescription"].ToString();
-                    fond.pictureBox1.Image = Image.FromFile("Resources/" + reader["CharityLogo"].ToString());
+                    f.label1.Text = reader["CharityName"].ToString();
+                    f.textBox1.Text = reader["CharityDescription"].ToString();
+                    f.pictureBox1.Image = Image.FromFile("Resources/" + reader["CharityLogo"].ToString());
                 }
                 con.Close();
             }
-            fond.ShowDialog();
+            f.ShowDialog();
             
         }
 
